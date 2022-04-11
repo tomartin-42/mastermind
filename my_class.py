@@ -1,18 +1,26 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    mastermind.py                                      :+:      :+:    :+:    #
+#    class.py                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: tomartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/10 14:24:22 by tomartin          #+#    #+#              #
-#    Updated: 2022/04/11 17:34:31 by tomartin         ###   ########.fr        #
+#    Created: 2022/04/11 16:03:32 by tomartin          #+#    #+#              #
+#    Updated: 2022/04/11 20:44:34 by tomartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-from aux import *
+class IncorrectValue(Exception):
+    print("Incorrect value range")
 
-num = init_number()
-answ = insert_nums()
-print (num, answ)
-check_nums(num, answ)
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
