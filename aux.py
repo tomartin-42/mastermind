@@ -6,7 +6,7 @@
 #    By: tomartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 15:19:41 by tomartin          #+#    #+#              #
-#    Updated: 2022/04/12 15:14:04 by tomartin         ###   ########.fr        #
+#    Updated: 2022/04/12 15:41:40 by tomartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,8 @@ def insert_nums():
     print ("Insert num", insert_num)
     return insert_num
 
+#Check if the number(only one aswer number) is un secret num
+#or not, print the answer 
 def check_incl(answ, nums):
     i = 0
     flag = False
@@ -52,6 +54,8 @@ def check_incl(answ, nums):
     if (flag == False):
         print (my_class.bcolors.ENDC + str(answ), " ", end="")
 
+#Check if is correct number in correct position
+#if is not correct pass to check_incl function
 def check_nums(nums, answ):
     i = 0
     for x in nums:
@@ -61,3 +65,7 @@ def check_nums(nums, answ):
             check_incl(answ[i], nums)
         i = i + 1
 
+#Save the total answer list
+def save_answ(answ):
+    total_answ.apend(answ)
+    return total_answ
