@@ -6,7 +6,7 @@
 #    By: tomartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 15:19:41 by tomartin          #+#    #+#              #
-#    Updated: 2022/04/11 20:51:24 by tomartin         ###   ########.fr        #
+#    Updated: 2022/04/12 15:14:04 by tomartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,11 +44,13 @@ def insert_nums():
 
 def check_incl(answ, nums):
     i = 0
+    flag = False
     for x in nums:
         if (x == answ):
             print (my_class.bcolors.WARNING + str(answ), " ", end="")
-        else:
-            print (answ, end="")
+            flag = True
+    if (flag == False):
+        print (my_class.bcolors.ENDC + str(answ), " ", end="")
 
 def check_nums(nums, answ):
     i = 0
