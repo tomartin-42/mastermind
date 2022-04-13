@@ -6,14 +6,14 @@
 #    By: tomartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 14:24:22 by tomartin          #+#    #+#              #
-#    Updated: 2022/04/13 15:49:50 by tomartin         ###   ########.fr        #
+#    Updated: 2022/04/13 15:58:59 by tomartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 from aux import *
 
 total_answ = []
-leng_num = int(8)
+leng_num = int(5)
 answ_num = leng_num
 answ_try = int(5)
 i = int(0)
