@@ -6,7 +6,7 @@
 #    By: tomartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 15:19:41 by tomartin          #+#    #+#              #
-#    Updated: 2022/04/12 15:41:40 by tomartin         ###   ########.fr        #
+#    Updated: 2022/04/13 15:49:16 by tomartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,17 +14,21 @@ from random import randrange
 import my_class
 
 #Generate random code
-def init_number():
+def init_number(leng_num):
     secret_num = []
-    for i in range(5):
+    i = int()
+    while i < leng_num:
         secret_num.append(int(randrange(10)))
+        i = i + 1
     print(secret_num)
     return secret_num
 
 #Insert and check answers
-def insert_nums():
+def insert_nums(answ_num):
     insert_num = []
-    for i in range(5):
+    i = int()
+
+    while i < answ_num:
         while True:
             print ("Inserte el", i + 1, "num =")
             num = input()
@@ -39,6 +43,7 @@ def insert_nums():
             else:
                 insert_num.append(num)
                 break
+        i = i + 1
     print ("Insert num", insert_num)
     return insert_num
 
@@ -49,7 +54,7 @@ def check_incl(answ, nums):
     flag = False
     for x in nums:
         if (x == answ):
-            print (my_class.bcolors.WARNING + str(answ), " ", end="")
+            print (my_class.bcolors.WARNING + str(answ), " " + my_class.bcolors.ENDC, end="")
             flag = True
     if (flag == False):
         print (my_class.bcolors.ENDC + str(answ), " ", end="")
@@ -60,12 +65,7 @@ def check_nums(nums, answ):
     i = 0
     for x in nums:
         if (x == answ[i]):
-            print (my_class.bcolors.OKGREEN + str(answ[i]), " ", end="")
+            print (my_class.bcolors.OKGREEN + str(answ[i]), " " + my_class.bcolors.ENDC, end="")
         else:
             check_incl(answ[i], nums)
         i = i + 1
-
-#Save the total answer list
-def save_answ(answ):
-    total_answ.apend(answ)
-    return total_answ
