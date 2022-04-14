@@ -6,7 +6,7 @@
 #    By: tomartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 15:19:41 by tomartin          #+#    #+#              #
-#    Updated: 2022/04/13 15:59:05 by tomartin         ###   ########.fr        #
+#    Updated: 2022/04/14 16:00:53 by tomartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,10 +65,13 @@ def check_incl(answ, nums):
 #if is not correct pass to check_incl function
 def check_nums(num, answ):
     i = 0
+    finish = int(0)
 
     for x in num:
         if (x == answ[i]):
             print (my_class.bcolors.OKGREEN + str(answ[i]), " " + my_class.bcolors.ENDC, end="")
+            finish += 1
         else:
             check_incl(answ[i], num)
         i = i + 1
+    return finish
