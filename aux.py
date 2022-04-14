@@ -6,7 +6,7 @@
 #    By: tomartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 15:19:41 by tomartin          #+#    #+#              #
-#    Updated: 2022/04/14 16:00:53 by tomartin         ###   ########.fr        #
+#    Updated: 2022/04/14 16:20:01 by tomartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ def insert_nums(answ_num):
                 print ("Num required")
             except my_class.IncorrectValue:
                print ("> 0 or < 10")
+               pass
             else:
                 insert_num.append(num)
                 break
