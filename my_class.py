@@ -6,13 +6,11 @@
 #    By: tomartin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/11 16:03:32 by tomartin          #+#    #+#              #
-#    Updated: 2022/04/14 16:18:13 by tomartin         ###   ########.fr        #
+#    Updated: 2022/04/14 16:59:52 by tomartin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 class IncorrectValue(Exception):
-    def dfn():
-        print("Incorrect Value!!!")
-
+    pass
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
